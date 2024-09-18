@@ -1,6 +1,6 @@
 import tareaInput from "./tareaInput.js";
 import botonEnviar from "./botonEnviar.js";
-import { agregarTarea, eliminarTarea } from "../funciones/funcionesTarea.js";
+import { agregarTarea } from "../funciones/funcionesTarea.js";
 
 const tareaContenedor = document.createElement("div");
 
