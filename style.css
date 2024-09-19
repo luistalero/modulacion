@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #66a7cf; /* Gris Claro */
+    color: #4b4848; /* Gris Oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    background-color: #c9baba; /* Blanco Puro para las tarjetas */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Botón Actualizar */
+button.actualizar {
+    background-color: #4CAF50; /* Verde Suave */
+    color: white;
+    border: 1px solid #757575; /* Gris Oscuro */
+}
+
+/* Botón Eliminar */
+button.eliminar {
+    background-color: #FF5252; /* Rojo Suave */
+    color: white;
+    border: 1px solid #757575; /* Gris Oscuro */
+}
+
+/* Checkbox para completar la tarea */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Estilos para la tarjeta de la tarea */
+.tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+/* Tareas completadas */
+p.tarea-completada {
+    text-decoration: line-through;
+    color: #757575; /* Gris Oscuro */
+}
+
+#root {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tarea {
+    margin-left: 50px;
+}
+
+#botones {
+    display: flex;
+    margin: 0 10px 0 10px;
+}
+
+#enviar {
+    margin-right: 30px;
+}

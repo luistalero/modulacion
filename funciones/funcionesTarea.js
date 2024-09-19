@@ -10,39 +10,24 @@ function agregarTarea(input) {
     `
     const parrafoTarea = document.createElement("p");
     parrafoTarea.textContent = input.value.trim();
-    input.value = null;
+    input.value = "";
 
     // BOTON ACTUALIZAR
     const botonActualizar = document.createElement("button");
     botonActualizar.textContent = "Actualizar";
-    botonActualizar.style = `
-        color: white;
-        background-color: green;
-        border: 1px solid grey
-    `
     botonActualizar.addEventListener("click", () => actualizarTarea(input, parrafoTarea));
 
     // BOTON TACHAR
-    const botonCompletar = document.createElement("button");
-    botonCompletar.textContent = "Completar Tarea";
-    botonActualizar.style = `
-        color: white;
-        background-color: blue;
-        border: 1px solid grey
-    `
-    botonCompletar.addEventListener("click", () => completarTarea(botonCompletar,tarjeta));
+    const botonCompletar = document.createElement("input");
+    botonCompletar.type = "checkbox";
+    botonCompletar.addEventListener("change", () => completarTarea(botonCompletar, parrafoTarea));
     
     // BOTON ELIMINAR
     const botonEliminar = document.createElement("button");
     botonEliminar.textContent = "Eliminar";
-    botonEliminar.style = `
-        color: white;
-        background-color: red;
-        border: 1px solid grey
-    `
     botonEliminar.addEventListener("click", () =>  eliminarTarea(tarjeta));
 
-    tarjeta.append(parrafoTarea, botonActualizar, botonCompletar, botonEliminar);
+    tarjeta.append(botonCompletar, parrafoTarea, botonActualizar, botonEliminar);
     div2.append(tarjeta);
 }
 
@@ -56,13 +41,20 @@ function actualizarTarea(nuevaTarea, tarea) {
     }, 3000);
 }
 
+function completarTarea(boton, tarea) {
+    if (boton.checked) {
+        tarea.style.textDecoration = "line-through";
+    } else {
+        tarea.style.textDecoration = "none";
+    }
+}
 
 function eliminarTarea(tarjetaTarea) {
     tarjetaTarea.remove();
 }
 
 function eliminarTodasTareas() {
-    parrafoTarea.innerHTML = "";
+    div2.innerHTML = "";
     alert("Todas las tareas han sido elimindas...")
 }
 
