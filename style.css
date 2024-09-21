@@ -92,6 +92,7 @@ input[type="checkbox"] {
 #chek {
     display: flex;
     border: none;
+    flex-direction: row;
     box-shadow: none;
     padding: 0%;
 }
@@ -137,6 +138,14 @@ input[type="checkbox"] {
         align-items: center;
     }
 
+    #chek {
+        display: flex;
+        border: none;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: none;
+        padding: 0%;
+    }
     
 /* Botón Actualizar */
 #actualizar {

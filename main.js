@@ -4,7 +4,7 @@ import div2 from "./componentes/contenedorTareas.js";
 import tareaContenedor from "./componentes/crearInput.js";
 import Tarea from "./clases/tarea.js";
 
-const miTarea = new Tarea("hola mundo");
+const miTarea = new Tarea("");
 
 miTarea.texto = ""
 root.append(miTarea.etiqueta);
